@@ -1,5 +1,10 @@
 # DirEnum
 
+|   \(_)_ _  | __|_ _ _  _ _ __  
+ | |) | | '_| | _|| ' \ || | '  \ 
+ |___/|_|_|   |___|_||_\_,_|_|_|_|
+                
+
 A simple python Diretory enumerator. 
 
 Requires:
