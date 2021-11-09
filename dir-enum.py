@@ -63,13 +63,13 @@ if __name__ == '__main__':
     threads = []
     multi = 50
 
-    for x in range(50):
+    for x in range(multi):
         t[x] = threading.Thread(target=program())
         t.daemon = True
         threads.append(t)
     
-    for i in range(50):
+    for i in range(multi):
         threads[i].start()
 
-    for i in range(50):
+    for i in range(multi):
         threads[i].join()
