@@ -1,6 +1,7 @@
 import requests
 import click
 import time
+import threading
 
 def banner():
     click.echo("""
@@ -58,4 +59,17 @@ def program(domain, wordlist, verbose):
 
 if __name__ == '__main__':
     banner()
-    program()
+    
+    threads = []
+    multi = 50
+
+    for x in range(50):
+        t[x] = threading.Thread(target=program())
+        t.daemon = True
+        threads.append(t)
+    
+    for i in range(50):
+        threads[i].start()
+
+    for i in range(50):
+        threads[i].join()
